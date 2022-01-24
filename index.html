@@ -1,0 +1,131 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Vitrine nothelastsk8">
+    <title>Loja virtual</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<img class="conteudo-principal-imagem" src="logo1.png">
+
+</head>
+
+<body>
+
+
+    <main class="cabecalho">
+        <h1 class="cabecalho-conteudo-principal">Venha ser NOTHELAST</h1>
+
+<h2 class="cabecalho-conteudo-secundario">Produtos : </h2>
+
+
+    </main>
+
+
+
+    <h1 class="inicio">Vitrine  NTL</h1>
+
+    <div id="produtos">
+
+       
+    </div>
+
+
+    <h2 class="final">Carrinho : </h2>
+
+
+    <div id="carrinho">
+
+        
+        
+    </div>
+
+    
+    <script>
+
+
+//vitrine
+        const items = [
+            {
+                id: 0,
+                nome: 'Camiseta',
+                img: '1.png',
+                quantidade: 0
+            },
+
+            {
+                id: 1,
+                nome: 'Modelo Reto',
+                img: '2.png',
+                quantidade: 0
+            },
+
+            {
+                id: 2,
+                nome: 'shorts',
+                img: '3.png',
+                quantidade: 0
+            },
+
+
+        ]
+        
+
+
+
+
+        //funcion
+        inicializarLoja = () => {
+
+            var containerProdutos = document.getElementById('produtos');
+            items.map((val) => {
+                containerProdutos.innerHTML += `
+                    <div class="produto-single">
+                        <img src="`+val.img+ `" />
+                        <p>`+val.nome+`</p>
+                            <a key="`+val.id+`" href="#">Adicionar ao carrinho!<a/>
+                        </div>
+                  `;
+
+            })
+        }
+
+        inicializarLoja();
+
+
+        
+       atualizarCarrinho = () => {  
+var containerCarrinho = document.getElementById('carrinho');
+    containerCarrinho.innerHTML = "";
+    items.map((val)=>{
+    if(val.quantidade > 0){
+        containerCarrinho.innerHTML+= `
+<p> `+val.nome+` | quantidade : `+val.quantidade+` </p>
+
+
+
+        `;
+         }
+})
+      }
+
+
+    </script>
+
+
+
+
+
+<footer class="rodape" >
+
+   <img class="imagem-rodape" src="NoTheLast.png">
+
+
+</footer>
+
+</body>
+
+
+</html>

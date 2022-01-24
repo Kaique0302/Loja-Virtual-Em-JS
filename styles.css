@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Sarala:wght@700&display=swap');
+
+
+
+
+* {
+    
+        margin: 0;
+        padding: 8px;
+        box-sizing: border-box;
+        text-decoration: none;
+        
+}
+
+
+body   {background-color:white;}
+
+
+
+#produtos,
+#carrinho{
+    max-width: 900px;
+    margin:auto;
+    align-items: center;
+    padding: 0 2%;
+    display: flex;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+
+}
+.produto-single {
+    width: 33.3%;
+    padding: 0 20px;
+}
+
+
+.final {
+    color:black;
+    font-family: 'Sarala', sans-serif;
+}
+.insta {
+    color: chocolate;
+    font-family: 'Luxurious Roman', cursive;
+}
+
+.cabecalho {
+    margin-bottom: 48px;
+    border-top: 0.4px solid black;
+}
+
+.cabecalho-conteudo-principal{
+    font-family: 'Luxurious Roman', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+}
+
+
+.cabecalho-conteudo-secundario {
+
+    font-family: 'Luxurious Roman', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+
+
+}
+
+.imagem-rodape {
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
